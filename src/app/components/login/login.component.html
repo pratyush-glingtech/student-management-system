@@ -1,0 +1,38 @@
+<div class="container">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+        <div class="heading">
+            <h2>Login</h2>
+            <p>Please Enter your details!!!</p>
+        </div>
+        <div class="form-element">
+            <label for="email" >Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" ngModel email required #emailInput="ngModel" />
+          
+            @if (emailInput.invalid && emailInput.touched && !emailInput.dirty) {
+                <p>please enter email</p>
+            }
+            @if (emailInput.invalid && emailInput.touched && emailInput.dirty) {
+                <p>please enter valid email</p>
+            }
+        </div>
+        
+    
+        <div class="form-element">
+            <label for="password" >Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" ngModel minlength="8" required #passwordInput="ngModel" />
+
+            @if (passwordInput.invalid && passwordInput.touched && !passwordInput.dirty) {
+                <p>please enter password</p>
+            }
+            @if (passwordInput.invalid && passwordInput.touched && passwordInput.dirty) {
+                <p>please enter valid password</p>
+            }
+        </div>
+
+        <div>
+            <button class="button" >Login</button>
+        </div>
+
+     
+    </form>
+</div>
