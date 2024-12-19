@@ -1,10 +1,11 @@
 import { afterNextRender, Component, DestroyRef, inject, viewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

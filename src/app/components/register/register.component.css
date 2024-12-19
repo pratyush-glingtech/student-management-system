@@ -54,3 +54,32 @@ input{
 .button:hover{
     background-color: #f5f526;
 }
+
+.button:disabled{
+    background-color: #f5f56a;
+}
+
+.error{
+    padding-top: 2px;
+    color: #f05959;
+    font-size: 11px;
+}
+
+.login-link{
+    color: #fff;
+    font-size: small;
+    padding: 5px;
+}
+
+.login-link a{
+    color: #f5f56a;
+    transition: color .3s linear;
+}
+
+.login-link a:hover{
+    color: #f5f526;
+}
+
+.label{
+    padding-left: 2px;
+}

@@ -26,7 +26,7 @@ form{
     padding-bottom: 1rem;
 }
 
-.form-element p{
+.error{
     padding-top: 2px;
     color: #f05959;
     font-size: 11px;
@@ -53,4 +53,19 @@ input{
 
 .button:hover{
     background-color: #f5f526;
+}
+
+.register-link{
+    color: #fff;
+    font-size: small;
+    padding: 5px;
+}
+
+.register-link a{
+    color: #f5f56a;
+    transition: color .3s linear;
+}
+
+.register-link a:hover{
+    color: #f5f526;
 }

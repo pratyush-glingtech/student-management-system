@@ -9,10 +9,10 @@
             <input type="text" id="email" name="email" placeholder="Enter your email" ngModel email required #emailInput="ngModel" />
           
             @if (emailInput.invalid && emailInput.touched && !emailInput.dirty) {
-                <p>please enter email</p>
+                <p class="error">please enter email</p>
             }
             @if (emailInput.invalid && emailInput.touched && emailInput.dirty) {
-                <p>please enter valid email</p>
+                <p class="error">please enter valid email</p>
             }
         </div>
         
@@ -22,10 +22,10 @@
             <input type="password" id="password" name="password" placeholder="Enter your password" ngModel minlength="8" required #passwordInput="ngModel" />
 
             @if (passwordInput.invalid && passwordInput.touched && !passwordInput.dirty) {
-                <p>please enter password</p>
+                <p class="error">please enter password</p>
             }
             @if (passwordInput.invalid && passwordInput.touched && passwordInput.dirty) {
-                <p>please enter valid password</p>
+                <p class="error">please enter valid password</p>
             }
         </div>
 
@@ -36,3 +36,4 @@
      
     </form>
 </div>
+<div class="register-link">Not a member? <a routerLink="/register">Register</a></div>
